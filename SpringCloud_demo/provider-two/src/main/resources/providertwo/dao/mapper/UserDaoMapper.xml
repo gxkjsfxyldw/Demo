@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="providertwo.dao.mapper.UserDaoMapper">
+	<resultMap id="BaseResultMap" type="providertwo.dao.pojo.User">
+		<result column="id" property="id" />
+		<result column="username" property="username" />
+	</resultMap>
+	<parameterMap id="User" type="providertwo.dao.pojo.User"/>
+	<sql id="Base_Column_List">
+		id, username
+	</sql>
+	<select id="findAllUser" resultMap="BaseResultMap" >
+		select
+		<include refid="Base_Column_List" />
+		from user
+	</select>
+	<insert id="createUser" parameterMap="User" useGeneratedKeys="true" keyProperty="id">
+		insert into
+			user(id,username)
+		values
+			(#{id},#{username})
+	</insert>
+	<delete id="delUser">
+		delete from user where id=#{id}
+	</delete>
+	<update id="updateUser">
+		update user set username=#{username} where id=#{id}
+	</update>
+</mapper>

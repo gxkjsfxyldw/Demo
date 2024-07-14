@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ldw.dao.mapper.FunctionRolerMapper">
+
+    <select id="getListByRoleId" resultType="com.ldw.Vo.FunctionRoleVo">
+        select
+            function_role.id,
+            role.role_name,
+            role.description as roleDescription,
+            function.name,
+            function.parent_id,
+            function.url,
+            function.description as funDescription
+        from function
+                 join function_role on function_id=function.id
+                 join role on role.id=function_role.role_id
+        where role.id=#{roleId}
+    </select>
+</mapper>

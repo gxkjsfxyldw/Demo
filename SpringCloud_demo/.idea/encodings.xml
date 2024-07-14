@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/EurekaServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/EurekaServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-Hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-Hystrix/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-ribbon/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-ribbon/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-one/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-one/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-two/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider-two/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
